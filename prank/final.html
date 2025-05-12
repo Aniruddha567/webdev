@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6e088d;
+            margin: 0;
+            padding: 20px;
+        }
+        img {
+            height: auto;
+            display : block;
+            margin : 0 auto;
+            width: 50%;
+            border: 2px solid #4483cc;
+            border-radius: 10px;
+        }
+        #message {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function() {
+            const cgpa = getQueryParam('cgpa');
+            const messageElement = document.getElementById('message');
+            // Dynamically update the image source and message based on the CGPA condition.
+            const imgElement = document.querySelector('img');
+            if (parseFloat(cgpa) >= 8.7) {
+                messageElement.innerHTML = "<h1> 9 poiner ke sath Tuze kahi prr bhi mil jayegi bhai .</h1>";
+                imgElement.src = "image.png";
+            } else {
+                messageElement.innerHTML = "<h1>Padhai krr bhai, 8.7 ke niche nhi mil rhi internship</h1>";
+                imgElement.src = "image2.png";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Ensure the server allows the GET method for serving this HTML file to resolve the 405 error. -->
+    <!-- We've borrowed the CGPA value from the query parameter (set in apply.html) to display a message based on the condition -->
+    <img alt="study boy">
+    <div id="message"></div>
+    
+    <div id="message"><h1>Loading your eligibility status...</h1></div>
+</html>

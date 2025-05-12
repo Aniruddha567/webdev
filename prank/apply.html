@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px 30px; /* Adjusted padding for even spacing */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4483cc;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="final.html" method="get">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <!-- add input for education qualification  -->
+             <!-- make it drop down list in the tech field -->
+            <label for="education">Education Qualification:</label>
+            <select id="education" name="education" required>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="tech-field">Technical Field:</label>
+            <select id="tech-field" name="tech-field" required>
+                <option value="software">Software Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="web-development">Web Development</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <select id="current-year" name="current-year" >
+                <option value="first">1st Year</option>
+                <option value="second">2nd Year</option>
+                <option value="third">3rd Year</option>
+                <option value="fourth">4th Year</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="cgpa">CGPA:</label>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" >
+        </div>
+        
+        <button type="submit">Submit Application</button>
+    </form>
+    </div>
+</body>
+</html>
